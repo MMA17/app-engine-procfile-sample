@@ -23,8 +23,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+      # - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
       - name: Trigger deploy in Bizfly App Engine
-        run: curl -X POST https://staging2.bizflycloud.vn/api/app-engine/v1/services/ed91751d-96e5-4b1f-a018-f6dade4a5298/hook?token=6fb0b22e9dc44b23
+        run: curl -X POST ${{ secrets.SuperSecret }}
