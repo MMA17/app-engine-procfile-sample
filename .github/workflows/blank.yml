@@ -27,4 +27,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Trigger deploy in Bizfly App Engine
-        run: curl -X POST ${{ secrets.SuperSecret }}
+        run: curl -X POST ${{ secrets.WEBHOOK_URL }}
+        # env:
+
